@@ -11,6 +11,13 @@ class HomeController extends GetxController {
   void onInit() {
     getAdBanners();
     super.onInit();
+    print('HomeController: onInit');
+  }
+
+  @override
+  void onClose() {
+    print('HomeController: onClose');
+    super.onClose();
   }
 
   void getAdBanners() async {
@@ -18,7 +25,7 @@ class HomeController extends GetxController {
       isBannerLoading(true);
       var result = await RemoteBannerService().get();
       if (result != null) {
-        bannerList.assignAll(adBannerListFromJson(result));
+        bannerList.assignAll(adBannerListFromJson(result.body));
       }
     } finally {
       isBannerLoading(false);
