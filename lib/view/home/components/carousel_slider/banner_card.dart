@@ -39,7 +39,6 @@ class BannerCard extends StatelessWidget {
           ),
           fit: BoxFit.cover,
           width: double.infinity,
-
         ),
       ),
     );

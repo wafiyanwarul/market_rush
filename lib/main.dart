@@ -6,12 +6,12 @@ import 'package:market_rush/theme/app_theme.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  FlutterError.onError = (FlutterErrorDetails details) {
-    FlutterError.dumpErrorToConsole(details);
-    if (details.stack != null) {
-      print(details.stack);
-    }
-  };
+  // FlutterError.onError = (FlutterErrorDetails details) {
+  //   FlutterError.dumpErrorToConsole(details);
+  //   if (details.stack != null) {
+  //     print(details.stack);
+  //   }
+  // };
   runApp(const MyApp());
 }
 
